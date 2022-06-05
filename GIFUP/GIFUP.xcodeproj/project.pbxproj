@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A7E93DB74D1FD1BC3D442E /* Pods_GIFUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCFE218C34A4F87E9E0A054 /* Pods_GIFUP.framework */; };
+		555E1AE6C004E29946D37F23 /* Pods_GIFUP_GIFUPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968352B1D1C7EA1CCF3D8E7E /* Pods_GIFUP_GIFUPUITests.framework */; };
 		77EA2FF6284CF5AC0055DD0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA2FF5284CF5AC0055DD0F /* AppDelegate.swift */; };
 		77EA2FF8284CF5AC0055DD0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA2FF7284CF5AC0055DD0F /* SceneDelegate.swift */; };
 		77EA2FFA284CF5AC0055DD0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA2FF9284CF5AC0055DD0F /* HomeViewController.swift */; };
@@ -22,6 +24,7 @@
 		77EA3032284CFA660055DD0F /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3031284CFA660055DD0F /* HomeViewModelProtocol.swift */; };
 		77EA3034284CFA8B0055DD0F /* GifDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3033284CFA8B0055DD0F /* GifDetailViewModelProtocol.swift */; };
 		77EA3036284CFAFA0055DD0F /* GIFNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3035284CFAFA0055DD0F /* GIFNetworkService.swift */; };
+		FA99A9643D7F3482B45582C7 /* Pods_GIFUPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2859E2E58F55D1A0DD5D67C9 /* Pods_GIFUPTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BFB3598B6B1138BE8DAD4DA /* Pods-GIFUP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUP.debug.xcconfig"; path = "Target Support Files/Pods-GIFUP/Pods-GIFUP.debug.xcconfig"; sourceTree = "<group>"; };
+		0CCFE218C34A4F87E9E0A054 /* Pods_GIFUP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIFUP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1021786E1E99539C6D11B7E7 /* Pods-GIFUP-GIFUPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUP-GIFUPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GIFUP-GIFUPUITests/Pods-GIFUP-GIFUPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		11737B228E9A418988428F18 /* Pods-GIFUPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUPTests.debug.xcconfig"; path = "Target Support Files/Pods-GIFUPTests/Pods-GIFUPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2859E2E58F55D1A0DD5D67C9 /* Pods_GIFUPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIFUPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		688C58091C2ADE4115788D8D /* Pods-GIFUP-GIFUPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUP-GIFUPUITests.release.xcconfig"; path = "Target Support Files/Pods-GIFUP-GIFUPUITests/Pods-GIFUP-GIFUPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		77EA2FF2284CF5AC0055DD0F /* GIFUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EA2FF5284CF5AC0055DD0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EA2FF7284CF5AC0055DD0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +70,9 @@
 		77EA3031284CFA660055DD0F /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		77EA3033284CFA8B0055DD0F /* GifDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		77EA3035284CFAFA0055DD0F /* GIFNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFNetworkService.swift; sourceTree = "<group>"; };
+		968352B1D1C7EA1CCF3D8E7E /* Pods_GIFUP_GIFUPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIFUP_GIFUPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9775051E299A7434D75C8C18 /* Pods-GIFUPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUPTests.release.xcconfig"; path = "Target Support Files/Pods-GIFUPTests/Pods-GIFUPTests.release.xcconfig"; sourceTree = "<group>"; };
+		99A5614D4FFB3A8AD38A86CE /* Pods-GIFUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUP.release.xcconfig"; path = "Target Support Files/Pods-GIFUP/Pods-GIFUP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A7E93DB74D1FD1BC3D442E /* Pods_GIFUP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA99A9643D7F3482B45582C7 /* Pods_GIFUPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555E1AE6C004E29946D37F23 /* Pods_GIFUP_GIFUPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A0C92647F55F9DF815E450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CCFE218C34A4F87E9E0A054 /* Pods_GIFUP.framework */,
+				968352B1D1C7EA1CCF3D8E7E /* Pods_GIFUP_GIFUPUITests.framework */,
+				2859E2E58F55D1A0DD5D67C9 /* Pods_GIFUPTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77EA2FE9284CF5AC0055DD0F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,8 @@
 				77EA300B284CF5B20055DD0F /* GIFUPTests */,
 				77EA3015284CF5B30055DD0F /* GIFUPUITests */,
 				77EA2FF3284CF5AC0055DD0F /* Products */,
+				FBADBAED1C05BF4F4B9EAFB8 /* Pods */,
+				22A0C92647F55F9DF815E450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +220,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FBADBAED1C05BF4F4B9EAFB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BFB3598B6B1138BE8DAD4DA /* Pods-GIFUP.debug.xcconfig */,
+				99A5614D4FFB3A8AD38A86CE /* Pods-GIFUP.release.xcconfig */,
+				1021786E1E99539C6D11B7E7 /* Pods-GIFUP-GIFUPUITests.debug.xcconfig */,
+				688C58091C2ADE4115788D8D /* Pods-GIFUP-GIFUPUITests.release.xcconfig */,
+				11737B228E9A418988428F18 /* Pods-GIFUPTests.debug.xcconfig */,
+				9775051E299A7434D75C8C18 /* Pods-GIFUPTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77EA301C284CF5B30055DD0F /* Build configuration list for PBXNativeTarget "GIFUP" */;
 			buildPhases = (
+				0655E346358059706E80DC43 /* [CP] Check Pods Manifest.lock */,
 				77EA2FEE284CF5AC0055DD0F /* Sources */,
 				77EA2FEF284CF5AC0055DD0F /* Frameworks */,
 				77EA2FF0284CF5AC0055DD0F /* Resources */,
+				CCDDEC53126860D34CFC78CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77EA301F284CF5B30055DD0F /* Build configuration list for PBXNativeTarget "GIFUPTests" */;
 			buildPhases = (
+				3EB9C6FE2960E58584DBC7B4 /* [CP] Check Pods Manifest.lock */,
 				77EA3004284CF5B20055DD0F /* Sources */,
 				77EA3005284CF5B20055DD0F /* Frameworks */,
 				77EA3006284CF5B20055DD0F /* Resources */,
@@ -235,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77EA3022284CF5B30055DD0F /* Build configuration list for PBXNativeTarget "GIFUPUITests" */;
 			buildPhases = (
+				E9AD9C2DC99ED23B3189B77A /* [CP] Check Pods Manifest.lock */,
 				77EA300E284CF5B30055DD0F /* Sources */,
 				77EA300F284CF5B30055DD0F /* Frameworks */,
 				77EA3010284CF5B30055DD0F /* Resources */,
+				B489C9E8EEF477FBCBDF44CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +365,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0655E346358059706E80DC43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GIFUP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EB9C6FE2960E58584DBC7B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GIFUPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B489C9E8EEF477FBCBDF44CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIFUP-GIFUPUITests/Pods-GIFUP-GIFUPUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIFUP-GIFUPUITests/Pods-GIFUP-GIFUPUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GIFUP-GIFUPUITests/Pods-GIFUP-GIFUPUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDDEC53126860D34CFC78CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIFUP/Pods-GIFUP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIFUP/Pods-GIFUP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GIFUP/Pods-GIFUP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9AD9C2DC99ED23B3189B77A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GIFUP-GIFUPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77EA2FEE284CF5AC0055DD0F /* Sources */ = {
@@ -506,6 +655,7 @@
 		};
 		77EA301D284CF5B30055DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BFB3598B6B1138BE8DAD4DA /* Pods-GIFUP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -533,6 +683,7 @@
 		};
 		77EA301E284CF5B30055DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A5614D4FFB3A8AD38A86CE /* Pods-GIFUP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +711,7 @@
 		};
 		77EA3020284CF5B30055DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11737B228E9A418988428F18 /* Pods-GIFUPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +731,7 @@
 		};
 		77EA3021284CF5B30055DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9775051E299A7434D75C8C18 /* Pods-GIFUPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -598,6 +751,7 @@
 		};
 		77EA3023284CF5B30055DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1021786E1E99539C6D11B7E7 /* Pods-GIFUP-GIFUPUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -615,6 +769,7 @@
 		};
 		77EA3024284CF5B30055DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688C58091C2ADE4115788D8D /* Pods-GIFUP-GIFUPUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

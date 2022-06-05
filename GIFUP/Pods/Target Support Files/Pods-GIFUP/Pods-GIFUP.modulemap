@@ -1,0 +1,6 @@
+framework module Pods_GIFUP {
+  umbrella header "Pods-GIFUP-umbrella.h"
+
+  export *
+  module * { export * }
+}

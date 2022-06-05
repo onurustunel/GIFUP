@@ -16,6 +16,7 @@
 		77EA300D284CF5B20055DD0F /* GIFUPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA300C284CF5B20055DD0F /* GIFUPTests.swift */; };
 		77EA3017284CF5B30055DD0F /* GIFUPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3016284CF5B30055DD0F /* GIFUPUITests.swift */; };
 		77EA3019284CF5B30055DD0F /* GIFUPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3018284CF5B30055DD0F /* GIFUPUITestsLaunchTests.swift */; };
+		77EA302C284CF9280055DD0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA302B284CF9280055DD0F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		77EA3012284CF5B30055DD0F /* GIFUPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIFUPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EA3016284CF5B30055DD0F /* GIFUPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFUPUITests.swift; sourceTree = "<group>"; };
 		77EA3018284CF5B30055DD0F /* GIFUPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFUPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77EA302B284CF9280055DD0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,12 @@
 		77EA2FF4284CF5AC0055DD0F /* GIFUP */ = {
 			isa = PBXGroup;
 			children = (
-				77EA2FF5284CF5AC0055DD0F /* AppDelegate.swift */,
-				77EA2FF7284CF5AC0055DD0F /* SceneDelegate.swift */,
+				77EA302A284CF8F20055DD0F /* View */,
+				77EA3029284CF8DD0055DD0F /* Model */,
+				77EA3028284CF8C80055DD0F /* NetworkService */,
+				77EA3027284CF8B70055DD0F /* ViewModel */,
+				77EA3026284CF8AE0055DD0F /* Protocol */,
+				77EA3025284CF8A30055DD0F /* Core */,
 				77EA2FF9284CF5AC0055DD0F /* HomeViewController.swift */,
 				77EA2FFB284CF5AC0055DD0F /* Main.storyboard */,
 				77EA2FFE284CF5B20055DD0F /* Assets.xcassets */,
@@ -125,6 +131,51 @@
 				77EA3018284CF5B30055DD0F /* GIFUPUITestsLaunchTests.swift */,
 			);
 			path = GIFUPUITests;
+			sourceTree = "<group>";
+		};
+		77EA3025284CF8A30055DD0F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				77EA2FF7284CF5AC0055DD0F /* SceneDelegate.swift */,
+				77EA2FF5284CF5AC0055DD0F /* AppDelegate.swift */,
+				77EA302B284CF9280055DD0F /* Constants.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		77EA3026284CF8AE0055DD0F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		77EA3027284CF8B70055DD0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77EA3028284CF8C80055DD0F /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		77EA3029284CF8DD0055DD0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77EA302A284CF8F20055DD0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +312,7 @@
 				77EA2FFA284CF5AC0055DD0F /* HomeViewController.swift in Sources */,
 				77EA2FF6284CF5AC0055DD0F /* AppDelegate.swift in Sources */,
 				77EA2FF8284CF5AC0055DD0F /* SceneDelegate.swift in Sources */,
+				77EA302C284CF9280055DD0F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

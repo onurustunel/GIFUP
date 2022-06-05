@@ -33,6 +33,8 @@
 		77EA3045284D002B0055DD0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3044284D002B0055DD0F /* HomeViewModel.swift */; };
 		77EA3047284D004A0055DD0F /* GifDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3046284D004A0055DD0F /* GifDetailViewModel.swift */; };
 		77EA3049284D00650055DD0F /* GifImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA3048284D00650055DD0F /* GifImageCellViewModel.swift */; };
+		77EA304B284D04F00055DD0F /* searched_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 77EA304A284D04F00055DD0F /* searched_test.json */; };
+		77EA304D284D04FA0055DD0F /* random_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 77EA304C284D04FA0055DD0F /* random_test.json */; };
 		FA99A9643D7F3482B45582C7 /* Pods_GIFUPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2859E2E58F55D1A0DD5D67C9 /* Pods_GIFUPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		77EA3044284D002B0055DD0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		77EA3046284D004A0055DD0F /* GifDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewModel.swift; sourceTree = "<group>"; };
 		77EA3048284D00650055DD0F /* GifImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageCellViewModel.swift; sourceTree = "<group>"; };
+		77EA304A284D04F00055DD0F /* searched_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searched_test.json; sourceTree = "<group>"; };
+		77EA304C284D04FA0055DD0F /* random_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = random_test.json; sourceTree = "<group>"; };
 		968352B1D1C7EA1CCF3D8E7E /* Pods_GIFUP_GIFUPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIFUP_GIFUPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9775051E299A7434D75C8C18 /* Pods-GIFUPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUPTests.release.xcconfig"; path = "Target Support Files/Pods-GIFUPTests/Pods-GIFUPTests.release.xcconfig"; sourceTree = "<group>"; };
 		99A5614D4FFB3A8AD38A86CE /* Pods-GIFUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFUP.release.xcconfig"; path = "Target Support Files/Pods-GIFUP/Pods-GIFUP.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 		77EA300B284CF5B20055DD0F /* GIFUPTests */ = {
 			isa = PBXGroup;
 			children = (
+				77EA304A284D04F00055DD0F /* searched_test.json */,
+				77EA304C284D04FA0055DD0F /* random_test.json */,
 				77EA300C284CF5B20055DD0F /* GIFUPTests.swift */,
 			);
 			path = GIFUPTests;
@@ -388,6 +394,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EA304D284D04FA0055DD0F /* random_test.json in Resources */,
+				77EA304B284D04F00055DD0F /* searched_test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

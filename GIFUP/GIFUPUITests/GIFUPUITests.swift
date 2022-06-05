@@ -26,13 +26,27 @@ class GIFUPUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+ 
+        let GIFUPHomeviewNavigationBar = app.navigationBars["GIFUP.HomeView"]
+        XCTAssertTrue(GIFUPHomeviewNavigationBar.exists)
+        
+        let searchController = GIFUPHomeviewNavigationBar.searchFields["Search"]
+        XCTAssertTrue(searchController.exists)
+        searchController.tap()
+        searchController.typeText("Test")
+        sleep(5)
+        
+        let collectionViewElement = app.collectionViews.children(matching: .cell).element(boundBy: 0)
+        if collectionViewElement.exists {
+            collectionViewElement.tap()
+            app.navigationBars.buttons["Back"].tap()
+        }
+        sleep(2)
+        GIFUPHomeviewNavigationBar.buttons["Cancel"].tap()
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()

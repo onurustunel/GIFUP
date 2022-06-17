@@ -28,7 +28,7 @@ enum GIFNetworkServiceEndPoint: String {
     }
 }
 
-struct OpenChargeNetworkService: GIFNetworkServiceProtocol  {
+struct GIFNetworkService: GIFNetworkServiceProtocol  {
     
     /// This function sends network request and gives GIFModel type data.
     /// - Parameter completion: GIFModel base model type
@@ -65,7 +65,7 @@ struct OpenChargeNetworkService: GIFNetworkServiceProtocol  {
     
 }
 
-extension OpenChargeNetworkService {
+extension GIFNetworkService {
     /// our secret api key
     private var apiKey: String {
         get {

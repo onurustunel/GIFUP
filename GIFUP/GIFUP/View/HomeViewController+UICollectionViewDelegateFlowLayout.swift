@@ -35,7 +35,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.identifier, for: indexPath) as? SectionHeader {
-                sectionHeader.label.text = viewModel.sectionHeader()
+                sectionHeader.label.text = viewModel?.sectionHeader()
                 return sectionHeader
             } else {
                 return UICollectionReusableView()

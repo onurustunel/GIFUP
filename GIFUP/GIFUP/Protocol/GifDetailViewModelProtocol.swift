@@ -12,5 +12,6 @@ protocol GifDetailViewModelProtocol {
     func titleDecide() -> String
     func linkDecide() -> String
     func ratingDecide() -> String
+    func hideRatingLabel() -> Bool
 }
 

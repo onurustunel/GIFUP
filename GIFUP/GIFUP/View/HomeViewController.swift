@@ -7,13 +7,9 @@
 
 import UIKit
 
-protocol HomeOutput: AnyObject {
-    func reloadData()
-}
-
 final class HomeViewController: UIViewController {
     /// Logic for not reload collectionView after navigate back from GIFDetailViewController
-    var networkRequestPermission = true
+    private var networkRequestPermission = true
     /// Logic for searching now
     var searchingNow = false {
         didSet {
@@ -33,11 +29,17 @@ final class HomeViewController: UIViewController {
         return collectionView
     }()
     
-    lazy var viewModel: HomeViewModelProtocol = HomeViewModel()
+    lazy var viewModel: HomeViewModelProtocol? = nil
+    
+    convenience init(viewModel: HomeViewModelProtocol) {
+        self.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
     private let searchController = UISearchController()
     
     /// Fetch random gifs every Constant.requestDuration seconds
-    var timer: Timer?
+    private var timer: Timer?
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -49,12 +51,18 @@ final class HomeViewController: UIViewController {
         setupView()
         setupSearchBar()
         setupRequest()
-        viewModel.setDelegate(outPut: self)
+        observeChanges()
+    }
+    
+    private func observeChanges() {
+        viewModel?.bindNewDataArrived.assignValue { [weak self] _ in
+            self?.reloadCollectionView()
+        }
     }
     
     /// Fetch random gifs and fire time
     private func setupRequest() {
-        viewModel.fetchRandomGIF()
+        viewModel?.fetchRandomGIF()
         timer = Timer.scheduledTimer(timeInterval: Constants.requestDuration, target: self, selector: #selector(refreshRequest), userInfo: nil, repeats: true)
     }
     
@@ -69,7 +77,7 @@ final class HomeViewController: UIViewController {
     
     /// Refresh request every Constant.requestDuration seconds
     @objc fileprivate func refreshRequest() {
-        viewModel.fetchRandomGIF()
+        viewModel?.fetchRandomGIF()
     }
     
     /// Setup Search Controller
@@ -89,18 +97,12 @@ final class HomeViewController: UIViewController {
     /// Present GIFDetailViewController
     /// - Parameter index: IndexPath.row
     private func navigateToDetail(index: Int) {
-        guard let selectedGIFViewModel = viewModel.searchedGIFcellForRow(index: index) else { return }
+        guard let selectedGIFViewModel = viewModel?.searchedGIFcellForRow(index: index) else { return }
         let detailViewController = GIFDetailViewController(gifDetailViewModel: selectedGIFViewModel)
         detailViewController.navigateBack = { [weak self] in
             self?.networkRequestPermission = false
         }
         navigationController?.pushViewController(detailViewController, animated: true)
-    }
-}
-
-extension HomeViewController: HomeOutput {
-    func reloadData() {
-        reloadCollectionView()
     }
 }
 
@@ -113,14 +115,14 @@ extension HomeViewController: UISearchBarDelegate {
         networkRequestPermission = true
         // timer will start here again.
         setupRequest()
-        viewModel.clearSearchedGIF()
+        viewModel?.clearSearchedGIF()
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         // timer will stop here...
         timer?.invalidate()
         timer = nil
-        viewModel.clearRandomGIF()
+        viewModel?.clearRandomGIF()
         return true
     }
 }
@@ -129,9 +131,9 @@ extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
         
-        if text.count > 1 {
+        if text.count > 2 {
             /// Send request to search gif
-            viewModel.searchGIFText = text
+            viewModel?.searchGIFText = text
             searchingNow = true
         } else {
             searchingNow = false
@@ -142,21 +144,21 @@ extension HomeViewController: UISearchResultsUpdating {
 //MARK:- UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchingNow ? viewModel.searchedNumberOfItemsInSection() : viewModel.randomNumberOfItemsInSection()
+        return searchingNow ? viewModel?.searchedNumberOfItemsInSection() ?? 0 : viewModel?.randomNumberOfItemsInSection() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch searchingNow {
-        
+            
         case true:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GifImageCell.identifier, for: indexPath) as? GifImageCell {
-                let data = viewModel.searchedGIFImageCellForRow(index: indexPath.row)
+                let data = viewModel?.searchedGIFImageCellForRow(index: indexPath.row)
                 cell.configure(viewModel: data)
                 return cell
             } else { return UICollectionViewCell() }
         case false:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GifCell.identifier, for: indexPath) as? GifCell {
-                cell.gifDetailViewModel = viewModel.randomGIFcellForRow()
+                cell.gifDetailViewModel = viewModel?.randomGIFcellForRow()
                 return cell
             } else { return UICollectionViewCell() }
         }
@@ -172,5 +174,9 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
-
-
+extension HomeViewController {
+    static func build() -> UIViewController {
+        let viewModel = HomeViewModel()
+        return HomeViewController(viewModel: viewModel)
+    }
+}

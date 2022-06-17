@@ -45,5 +45,9 @@ extension GifDetailViewModel: GifDetailViewModelProtocol {
             return ""
         }
     }
+    
+    func hideRatingLabel() -> Bool {
+        return ratingDecide().isEmpty ? true : false
+    }
 }
 

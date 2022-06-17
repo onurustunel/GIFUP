@@ -9,17 +9,16 @@ import Foundation
 
 /// HomeViewModelProtocol
 protocol HomeViewModelProtocol: AnyObject {
-    func fetchRandomGIF()
     var randomGIFData: GIFModel? { get set }
     var searchedGIFData: [GIFModel]? { get set }
     var searchGIFText: String? { get set }
     var gifNetworkService: GIFNetworkServiceProtocol { get }
-    var delegate: HomeOutput? { get }
-    func setDelegate(outPut: HomeOutput)
+    var bindNewDataArrived: Bindable<()?> { get }
+    func fetchRandomGIF()
     func searchedNumberOfItemsInSection() -> Int
+    func randomNumberOfItemsInSection() -> Int
     func searchedGIFcellForRow(index: Int) -> GifDetailViewModel?
     func searchedGIFImageCellForRow(index: Int) -> GifImageCellViewModel?
-    func randomNumberOfItemsInSection() -> Int
     func randomGIFcellForRow() -> GifDetailViewModel
     func clearRandomGIF()
     func clearSearchedGIF()

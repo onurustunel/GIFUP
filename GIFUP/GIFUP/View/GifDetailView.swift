@@ -85,7 +85,7 @@ final class GifDetailView: UIView {
             self.titleLabel.text = gifDetailViewModel.titleDecide()
             self.linkLabel.text = gifDetailViewModel.linkDecide()
             self.ratingLabel.text = gifDetailViewModel.ratingDecide()
-            self.ratingLabel.isHidden = gifDetailViewModel.ratingDecide() == ""
+            self.ratingLabel.isHidden = gifDetailViewModel.hideRatingLabel()
             self.gifImageView.kf.indicatorType = .activity
             self.gifImageView.kf.setImage(
                 with: gifDetailViewModel.gifPreviewUrl,

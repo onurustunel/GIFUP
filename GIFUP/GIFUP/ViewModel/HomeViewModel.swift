@@ -18,23 +18,16 @@ final class HomeViewModel: HomeViewModelProtocol {
             fetchSearchedGIF(text: searchGIFText)
         }
     }
-    var delegate: HomeOutput?
-    
     /// Notify data is arrived and reload collectionview
-    /// - Parameter outPut: HomeOutput protocol
-    func setDelegate(outPut: HomeOutput) {
-        delegate = outPut
-    }
+    var bindNewDataArrived = Bindable<()?>()
     
     /// Network Service
-    let gifNetworkService: GIFNetworkServiceProtocol
+    var gifNetworkService: GIFNetworkServiceProtocol
     
-    init() {
-        gifNetworkService = OpenChargeNetworkService()
+    init(gifNetworkService: GIFNetworkServiceProtocol =  GIFNetworkService()) {
+        self.gifNetworkService = gifNetworkService
     }
-    
-    //MARK:- Setup CollectionView with data
-    
+        
     /// Shows searchedGIFData Count to use on numberOfItemsInSection
     /// - Returns: searchedGIFData.count
     func searchedNumberOfItemsInSection() -> Int {
@@ -86,7 +79,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     func fetchRandomGIF() {
         gifNetworkService.fetchRandomGIF { [weak self] (result) in
             self?.randomGIFData = result
-            self?.delegate?.reloadData()
+            self?.bindNewDataArrived.value = ()
             self?.hasData = true
         }
     }
@@ -97,14 +90,14 @@ final class HomeViewModel: HomeViewModelProtocol {
         guard let text = text else { return }
         gifNetworkService.fetchSearchedGIF(searchText: text) { [weak self] (searchedGIFArray) in
             self?.searchedGIFData = searchedGIFArray
-            self?.delegate?.reloadData()
+            self?.bindNewDataArrived.value = ()
         }
     }
     
     /// Clear randomGIFData Array
     func clearRandomGIF() {
         randomGIFData = nil
-        delegate?.reloadData()
+        bindNewDataArrived.value = ()
     }
     
     /// Clear randomGIFData Array. DispatchQoS.QoSClass = background
